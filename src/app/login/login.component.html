@@ -1,0 +1,22 @@
+<div class="container col-md-6">
+    <h1 style="color:skyblue;">Login now</h1>
+    <h6>Please Enter your email & Password</h6>
+     <form [formGroup]="loginForm" (ngSubmit)="login()">
+   
+       
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Email</label>
+         <input formControlName="email" type="email" class="form-control" id="email" name="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input formControlName="password" type="password" class="form-control" id="password" name="password">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" >Login</button>
+        </div>
+
+     </form>
+     <a routerLink="/registration">New user? Click here to SignUp !!!</a>
+</div>

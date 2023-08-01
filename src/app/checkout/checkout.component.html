@@ -1,0 +1,40 @@
+<br>
+<div class="container col-md-6">
+  <h1 style="color:skyblue;">Check Out</h1>
+  
+   <form [formGroup]="checkOutForm" (ngSubmit)="[addCart()]">
+ 
+     <div class="mb-3">
+       <label for="exampleFormControlInput1" class="form-label">User Name</label>
+       <input formControlName="userName" type="text" class="form-control" id="userName" name="userName" >
+     </div>
+     <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+      <input formControlName="phoneNumber" type="number" class="form-control" id="phoneNumber" name="phoneNumber">
+      </div>
+     <div class="mb-3">
+       <label for="exampleFormControlInput1" class="form-label">Address</label>
+       <input formControlName="address" type="text" class="form-control" id="address" name="address" >
+     </div>
+     <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Product Name</label>
+      <input formControlName="productName" type="text" class="form-control" id="productName" name="productName" >
+    </div>
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Price</label>
+  <!-- <input formControlName="price" type="number" class="form-control" id="price" name="price"> -->
+  <input formControlName="price" type="number" class="form-control" id="amountInput" placeholder="Enter amount in INR">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Quantity</label>
+    <input formControlName="quantity" type="number" class="form-control" id="quantity" name="quantity">
+    </div>
+
+<!-- <button  class="btn btn-info" (click)="payNow()">Check Out</button> -->
+<button (click)="payNow()">Pay Amount</button>
+<!-- <input type="number" id="amountInput" placeholder="Enter amount in INR"> -->
+
+
+</form>
+
+</div>

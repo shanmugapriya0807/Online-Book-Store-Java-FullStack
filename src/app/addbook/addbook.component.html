@@ -1,0 +1,64 @@
+<!-- admin.component.html -->
+
+<div class="container col-md-6">
+  <h1 style="color:skyblue;">Add Book</h1>
+ <!-- <mat-progress-bar mode="buffer" *ngIf="progressBar"></mat-progress-bar> -->
+  <form [formGroup]="addBookForm" (ngSubmit)="addProduct()">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Book Title</label>
+      <input formControlName="title" type="text" class="form-control" id="title" name="title"
+        placeholder="Enter the book title">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Author Name</label>
+      <input formControlName="author" type="text" class="form-control" id="author" name="author"
+      placeholder="Enter the Author Name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Picture Url</label>
+      <input formControlName="pictureUrl" type="text" class="form-control" id="pictureUrl" name="pictureUrl"
+      placeholder="Enter the Picture Url">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Price</label>
+      <input formControlName="price" type="number" class="form-control" id="price" name="price"
+      placeholder="Enter the price">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Description</label>
+      <input formControlName="description" type="text" class="form-control" id="description" name="description" 
+      placeholder="Enter the description">
+</div> 
+   
+    <button type="submit" class="btn btn-info">Submit</button>
+  </form>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+<!--
+  (ngSubmit)="addProduct()" <div class="add-book-form">
+    <h2>Add Book Details</h2>
+    <form [formGroup]="addbookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input formControlName="title" type="text" id="title" name="title" >
+      </div>
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input formControlName="author" type="text" id="author" name="author" >
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input formControlName="price" type="number" id="price" name="price">
+      </div>
+      <button type="submit" routerLink="/home">Add Book</button>
+    </form>
+  </div>
+    -->

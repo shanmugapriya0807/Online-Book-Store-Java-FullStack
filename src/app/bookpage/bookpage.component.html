@@ -1,0 +1,43 @@
+<app-not-found [visible]="!book" notFoundMessage="Product Not Found !" 
+resetLinkText="Goto HomePage"></app-not-found>
+
+<div *ngIf="book" class="container">
+    <img [src]="book.imageUrl" [alt]="book.name">
+
+<div class="details">
+    <div class="header">
+        <span class="name">{{book.name}}</span>
+
+        <span class="favorite {{book.favorite?'':'not'}}">❤️</span>
+    </div> 
+    <!-- <div class="star"> 
+    <star-rating 
+        [value]="book.star"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        [readonly]="true"></star-rating>
+    </div> -->
+    
+    <div class="authors">Author:
+        <span *ngFor="let author of book.author">
+            {{author}}
+        </span>
+    </div>
+    <div class="tag">
+        <app-tags [bookPageTags]="book.tags" justifyContent="star-rating"></app-tags>
+    </div>
+    <div class="publisher">
+        <span>
+            Publisher :<strong>{{book.publisher}}</strong>
+        </span>
+    </div>
+
+    <div class="price">
+        <span>{{book.price|currency:'INR'}}</span>
+    </div>
+
+        <button (click)="addToCart()">Add to Cart</button>
+   </div>
+</div>
